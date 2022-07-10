@@ -1,0 +1,1121 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html, body{
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+*{
+	margin:0; 
+	padding:0; 
+	font-size:16px; 
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.clear{clear:both;}
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+body{
+	overflow-x:hidden;
+	background-color:#e72f2c;
+}
+ul{list-style-type:none;}
+a{text-decoration:none;}
+
+/* ===== header ===== */
+header{
+	width:100%;
+	padding:3.5vw 0;
+	position:relative;
+	z-index:100;
+}
+
+.h_inner{
+	margin:0 13.5%;
+}
+
+#mainlogo{
+	float:left;
+}
+#mainlogo img{
+	width:100%;
+	height:100%;
+}
+#mainlogo_m{
+	display:none;
+}
+nav{
+	float:left;
+	margin-left:calc(50% - 380px);
+	margin-top:-0.8vw;
+}
+.nav_bar{
+	display:none;
+}
+.nav_bar_menu{
+	display:none;
+}
+.nav_bar_menu_s{
+	display:none;
+}
+.gnb li{
+	float:left;
+	width:140px;
+	text-align:center;
+	position:relative;
+}
+.gnb li a{
+	display:block;
+	padding:10px 0;
+	color:#fff;
+	font-weight:500;
+}
+.gnb li.on a{
+	color:#e72f2c;
+	font-weight:600;
+}
+.gnb li.on::after{
+	content:"";
+	position:absolute;
+	top:16%;
+	left:calc(50% - 60px);
+	width:120px;
+	height:30px;
+	background-color:#fff;
+	border-radius:15px;
+	z-index:-1;
+}
+
+.right_btn{
+	float:right;
+}
+
+.lang{
+	width:30px;
+	height:30px;
+	background:url("../img/lang.png") no-repeat center 1px;
+	float:left;
+	margin-right:40px;
+	cursor:pointer;
+	position:relative;
+}
+.lang:hover .lang_sub{
+	-display:block;
+}
+
+.lang_sub{
+	width:50px;
+	background-color:rgba(255,255,255,0.5);
+	margin-top:30px;
+	padding:12px;
+	position:absolute;
+	left:-20px;
+	text-align:center;
+	display:none;
+}
+
+.lang_sub li:first-child{
+	margin-bottom:5px;
+}
+
+.lang_sub a{
+	color:#333;
+	font-weight:500;
+	font-size:14px;
+}
+
+.lang_sub li:hover a{
+	text-decoration:underline;
+}
+.goside{
+	width:21px;
+	height:20px;
+	float:left;
+	background:url("../img/side.png") no-repeat;
+	border:none;
+	cursor:pointer;
+	background-color:none;
+}
+
+/* ===== sideinfo ===== */
+#sideinfo{
+	position:fixed;
+	top:0;
+	right:0;
+	width:21%;
+	height:100vw;
+	background-color:#e72f2c;
+	display:none;
+	z-index:100;
+	box-shadow:0px 3px 8px rgba(0,0,0,0.4);
+}
+
+.closeinfo{
+	width:20px;
+	height:20px;
+	border:none;
+	background:url("../img/close.png") no-repeat center center;
+	cursor:pointer;
+	margin-top:30%;
+	margin-left:82%;
+}
+.topinfo{
+	width:85%;
+	border-bottom:1px solid #fff;
+	margin:0 auto;
+	padding-bottom:10%;
+
+}
+.tf_text1{
+	color:#fff;
+	font-size:1.8vw;
+	font-weight:500;
+}
+.tf_text2{
+	color:rgba(255,255,255,0.7);
+	font-size:1vw;
+}
+
+.stock_more{
+	width:100%;
+	text-align:right;
+	background:url("../img/sidemore.png") no-repeat right 70%;
+	background-size:5% auto;
+	margin-top:8%;
+}
+.stock_more a{
+	width:90%;
+	color:#fff;
+	font-size:0.9vw;
+	position:relative;
+	display:block;
+}
+.stock_more a:hover{
+	text-decoration:underline;
+}
+
+.bottominfo{
+	width:85%;
+	margin:8% auto 0;
+}
+
+.bf_text1{
+	color:#fff;
+	font-size:1.8vw;
+	font-weight:500;
+}
+
+.news_contents{
+	margin-top:0%;
+	box-sizing:border-box;
+}
+.news_contents li{
+	border-bottom:1px solid #fff;
+}
+.news_contents li a{
+	color:rgba(255,255,255,0.5);
+	font-size:1vw;
+	padding:6% 0;
+	display:block;
+}
+.news_contents li.alert a{
+	color:#fff;
+}
+
+.news_more{
+	width:100%;
+	text-align:right;
+	background:url("../img/sidemore.png") no-repeat right 70%;
+	background-size:5% auto;
+	margin-top:5%;
+}
+.news_more a{
+	width:90%;
+	color:#fff;
+	font-size:0.9vw;
+	position:relative;
+	display:block;
+	
+
+}
+.news_more a:hover{
+	text-decoration:underline;
+}
+
+
+#sidemenu{
+	display:none;
+}
+
+/* ===== 상단 텍스트 ===== */
+#recruit_top{
+	margin-top:10vh;
+	padding:0 18vw;
+	overflow:hidden;
+}
+
+.rt_text{
+	float:left;
+	color:#fff;
+	width:60%;
+	
+}
+
+.rt_text1{
+	font-size:3.5vw;
+	letter-spacing:0.3vw;
+	font-weight:500;
+}
+.rt_text2{
+	font-size:0.9vw;
+	letter-spacing:0.08vw;
+}
+
+.recruit_go{
+	float:right;
+	margin-top:calc(7%);
+	width:30%;
+	
+}
+.recruit_go a{
+	font-size:0.9vw;
+	width:60%;
+	border:1px solid #fff;
+	box-sizing:border-box;
+	display:block;
+	float:right;
+	text-align:center;
+	color:#fff;
+	padding:0.5vh 0;
+	transition:background-color 0.3s;
+}
+
+.recruit_go a:hover{
+	background-color:#fff;
+	color:#000;
+	font-weight:600;
+}
+
+
+/* ===== 채용 리스트 ===== */
+#recruit_card{
+	margin-top:4vw;
+	padding:0 20vw;
+}
+#recruit_card ul{
+	overflow:hidden;
+}
+#recruit_card li{
+	float:left;
+	width:30%;
+	height:10vw;
+	padding:6vw 0 7vw;
+}
+#recruit_card li:nth-child(1){
+	background:url("../img/card1.png") no-repeat center center;
+	background-size:95% 100%;
+}
+#recruit_card li:nth-child(2){
+	background:url("../img/card2.png") no-repeat center center;
+	background-size:95% 100%;
+	margin-left:5%;
+}
+#recruit_card li:nth-child(3){
+	float:right;
+	background:url("../img/card3.png") no-repeat center center;
+	background-size:95% 100%;
+}
+
+.r_cate{
+	font-size:0.8vw;
+	font-weight:500;
+	padding:1% 12% 5%;
+	
+
+}
+.r_text1{
+	font-size:1.2vw;
+	font-weight:600;
+	padding:3% 12%;
+}
+.r_text2{
+	font-size:0.8vw;
+	color:#7c7c7c;
+	padding:9% 12% 1%;
+}
+
+#rbg1{
+	background:url("../img/cardbg1.png") no-repeat 80% center;
+	background-size:10% auto;
+	
+}
+#rbg2{
+	background:url("../img/cardbg2.png") no-repeat 80% center;
+	background-size:14.5% auto;
+	
+}
+#rbg3{
+	background:url("../img/cardbg3.png") no-repeat 80% center;
+	background-size:16% auto;
+	
+}
+
+/* ===== 공지사항과 더 많은 채용공고 ===== */
+#nonall{
+	padding:0 20vw;
+	margin-top:5vw;
+}
+
+/* 공지사항 */
+#r_notice{
+	float:left;
+	width:45%;	
+}
+.rn_title{
+	padding-bottom:0.6vw;
+	border-bottom:0.01vw solid #fff;
+	box-sizing:border-box;
+	color:#fff;
+	font-size:0.8vw;
+}
+.notice_table{
+	margin-top:0.6vw;
+	width:100%;
+	border-collapse:collapse;
+}
+
+.notice_table td:first-child{
+	padding-bottom:1vw;
+}
+.notice_table td:first-child a{
+	font-size:0.8vw;
+	color:#fff;
+}
+.notice_table td:first-child a:hover{
+	text-decoration:underline;
+}
+.notice_table td:last-child{
+	font-size:0.8vw;
+	color:#fff;
+	padding-bottom:1vw;
+	text-align:right;
+}
+
+/* 채용공고 상세 */
+#r_all{
+	float:right;
+	box-sizing:border-box;
+	width:45%;
+}
+.rt_title{
+	float:left;
+}
+.rt_go{
+	float:right;
+}
+.ra_top{
+	padding-bottom:0.5vw;
+	border-bottom:0.01vw solid #fff;
+	box-sizing:border-box;
+	color:#fff;
+}
+.rt_title{
+	font-size:0.8vw;
+}
+.rt_go a{
+	font-size:0.8vw;
+	color:#fff;
+}
+.rt_go a:hover{
+	color:#000;
+}
+
+.recruit_table{
+	margin-top:0.6vw;
+	width:100%;
+	border-collapse:collapse;
+}
+.recruit_table td:first-child{
+	padding-bottom:1vw;
+}
+.recruit_table td:first-child a{
+	font-size:0.8vw;
+	color:#fff;
+}
+.recruit_table td:first-child a:hover{
+	text-decoration:underline;
+}
+.recruit_table td:last-child{
+	font-size:0.8vw;
+	color:#fff;
+	padding-bottom:1vw;
+	text-align:right;
+}
+
+
+
+/* ===== footer ===== */
+
+footer{
+	border-top:1px solid #fff;
+	padding:2% 13.8%;
+	overflow:hidden;
+	margin-top:5vw;
+}
+.f_logo{
+	float:left;
+	margin-top:1.6vh;
+	width:5vw;
+}
+.f_logo a{
+	display:block;
+	background:url("../img/logo.png") no-repeat center center;
+	background-size:80% auto;
+	padding:1.2vh;
+}
+.footer_link{
+	float:left;
+	margin-top:1.8vh;
+	margin-left:5vw;
+}
+.footer_link li{
+	float:left;
+	box-sizing:border-box;
+	height:100%;
+
+}
+.footer_link li:first-child{
+	margin-right:2vw;
+	position:relative;
+	
+}
+
+.footer_link li:first-child::after{
+	content:"";
+	position:absolute;
+	display:block;
+	top:calc(50% - 25%);
+	right:-1vw;
+	width:0.05vw;
+	height:60%;
+	background-color:#fff;
+
+}
+
+.footer_link li a{
+	color:#fff;
+	font-size:0.8vw;
+	display:block;
+}
+.footer_link li a:hover{
+	color:#000;
+}
+
+.footer_sns{
+	float:right;
+	width:15%;
+	text-align:right;
+	margin-top:0.8vw;
+	
+}
+.footer_sns li{
+	float:left;
+	width:33.3%;
+	text-align:right;
+}
+
+
+
+
+@media all and (max-width:1300px){
+	.h_inner{
+		margin:0 8%;
+	}
+	.lang{
+		margin-right:30px;
+	}	
+	nav{
+		display:none;
+	}
+	#mainlogo{
+		display:none;
+	}
+	#mainlogo_m{
+		margin-left:calc(50% - 7%);
+		float:left;
+		display:block;
+		width:10%;
+		text-align:center;
+	}
+	.nav_bar{
+		display:block;
+		float:left;
+		width:21px;
+		height:19px;
+		background:url("../img/ham.png") no-repeat;
+		background-size:cover;
+		cursor:pointer;
+	}
+	.nav_bar_s{
+		display:none;
+	}
+	.nav_bar_menu{
+		display:none;
+		position:absolute;
+		top:46%;
+		left:8%;
+	}
+	.nav_bar_menu li{
+		float:left;
+		margin-right:2vw;
+	}
+	.nav_bar_menu li a{
+		color:#fff;
+		font-size:1.5vw;
+		font-weight:500;
+	}
+	.nav_bar_menu li a:hover{
+		text-decoration:underline;
+	}
+	#sidemenu{
+		position:fixed;
+		-display:block;
+		left:0;
+		top:0;
+		background-color:#fff;
+		width:25%;
+		height:100%;
+		z-index:100;
+	}
+
+	/* ===== 서비스 텍스트 =====*/
+
+	#recruit_top{
+		margin-top:10vh;
+		padding:0 8vw;
+		overflow:hidden;
+	}
+	.rt_text{
+		float:left;
+		color:#fff;
+		width:50%;
+	}
+	.rt_text1{
+		font-size:4vw;
+		letter-spacing:0.3vw;
+		font-weight:500;
+	}
+	.rt_text2{
+		font-size:1.8vw;
+		letter-spacing:0;
+	}
+
+	.recruit_go{
+		float:right;
+		margin-top:8%;
+		width:30%;
+		
+	}
+	.recruit_go a{
+		font-size:1.6vw;
+		width:100%;
+		border:1px solid #fff;
+		box-sizing:border-box;
+		display:block;
+		float:right;
+		text-align:center;
+		color:#fff;
+		padding:1vh 0;
+	}
+
+	/* ===== 채용 리스트 ===== */
+	#recruit_card{
+		margin-top:6vw;
+		padding:0 10vw;
+	}
+	#recruit_card li{
+		float:left;
+		width:30%;
+		height:18vw;
+		padding:6vw 0 7vw;
+	}
+	.r_cate{
+		font-size:1.4vw;
+		font-weight:500;
+		padding:1% 12% 5%;	
+	}
+	.r_text1{
+		font-size:2vw;
+		font-weight:600;
+		padding:5% 12%;
+	}
+	.r_text2{
+		font-size:1.4vw;
+		color:#7c7c7c;
+		padding:10% 12% 1%;
+	}
+	#rbg1{
+		background:url("../img/cardbg1.png") no-repeat 85% center;
+		background-size:10% auto;
+		
+	}
+	#rbg2{
+		background:url("../img/cardbg2.png") no-repeat 85% center;
+		background-size:14.5% auto;
+		
+	}
+	#rbg3{
+		background:url("../img/cardbg3.png") no-repeat 85% center;
+		background-size:16% auto;
+		
+	}
+
+	/* ===== 공지사항과 더 많은 채용공고 ===== */
+	#nonall{
+		padding:0 8vw;
+		margin-top:6vw;
+	}
+	/* 공지사항 */
+	#r_notice{
+		float:left;
+		width:50%;	
+	}
+	.rn_title{
+		padding-bottom:0.6vw;
+		border-bottom:2px solid #fff;
+		box-sizing:border-box;
+		color:#fff;
+		font-size:1.8vw;
+		font-weight:500;
+	}
+	.notice_table{
+		margin-top:0.6vw;
+		width:100%;
+		border-collapse:collapse;
+	}
+
+	.notice_table td:first-child{
+		padding-bottom:1.4vw;
+	}
+	.notice_table td:first-child a{
+		font-size:1.4vw;
+		color:#fff;
+		font-weight:500;
+	}
+	.notice_table td:first-child a:hover{
+		text-decoration:underline;
+	}
+	.notice_table td:last-child{
+		font-size:1.2vw;
+		color:#fff;
+		padding-bottom:1vw;
+		text-align:right;
+	}
+
+	/* 채용공고 상세 */
+	#r_all{
+		float:right;
+		box-sizing:border-box;
+		width:45%;
+	}
+	.rt_title{
+		float:left;
+	}
+	.rt_go{
+		float:right;
+	}
+	.ra_top{
+		padding-bottom:0.5vw;
+		border-bottom:2px solid #fff;
+		box-sizing:border-box;
+		color:#fff;
+	}
+	.rt_title{
+		font-size:1.8vw;
+		font-weight:500;
+	}
+	.rt_go a{
+		font-size:1.4vw;
+		font-weight:500;
+		color:#fff;
+	}
+	.rt_go a:hover{
+		color:#000;
+	}
+
+	.recruit_table{
+		margin-top:0.6vw;
+		width:100%;
+		border-collapse:collapse;
+	}
+	.recruit_table td:first-child{
+		padding-bottom:1.4vw;
+	}
+	.recruit_table td:first-child a{
+		font-size:1.4vw;
+		color:#fff;
+		font-weight:500;
+	}
+	.recruit_table td:first-child a:hover{
+		text-decoration:underline;
+	}
+	.recruit_table td:last-child{
+		font-size:1.2vw;
+		color:#fff;
+		padding-bottom:1vw;
+		text-align:right;
+	}
+
+	/* ===== footer ===== */
+
+	footer{
+		border-top:1px solid #fff;
+		padding:2% 8%;
+		overflow:hidden;
+	}
+	.f_logo{
+		float:left;
+		margin-top:1vw;
+		width:8vw;
+	}
+	.f_logo img{
+		width:100%;
+		height:auto;
+	} 
+	.footer_link{
+		float:left;
+		margin-top:0.8vw;
+		margin-left:5vw;
+	}
+	.footer_link li{
+		float:left;
+	}
+	.footer_link li:first-child{
+		margin-right:2vw;
+		position:relative;
+	}
+
+	.footer_link li:first-child::after{
+		content:"";
+		position:absolute;
+		display:block;
+		top:30%;
+		right:-1vw;
+		width:0.05vw;
+		height:70%;
+		background-color:#fff;
+	}
+
+	.footer_link li a{
+		color:#fff;
+		font-size:1.2vw;
+	}
+	.footer_link li a:hover{
+		color:#000;
+	}
+
+	.footer_sns{
+		float:right;
+		width:20%;
+		text-align:right;
+		margin-top:0.8vw;
+		box-sizing:border-box;
+	}
+	.footer_sns li{
+		float:left;
+		width:31%;
+		text-align:right;
+		box-sizing:border-box;
+	}
+	.footer_sns li:nth-child(2){
+		-margin-top:1%;
+		margin-left:5%;
+	}
+	.footer_sns li img{
+		width:40%;
+		height:auto;
+	}
+	.footer_sns li:last-child img{
+		width:15%;
+		height:auto;
+	}
+
+}
+
+@media all and (max-width:767px){
+	header{
+		padding:5vw 0;	
+	}
+
+	.slidemenu_wrap{
+		display:none;
+	}
+	
+	.#sideinfo{
+		display:none;
+	}
+	
+	.right_btn{
+		display:none;
+	}
+
+	#mainlogo{
+		display:block;
+		float:left;
+		width:50px;
+		margin-top:-6px;
+	}
+	
+	
+	#mainlogo_m{
+		display:none;
+	}
+	.nav_bar{
+		display:none;
+	}
+	.nav_bar_s{
+		display:block;
+		float:right;
+		margin-top:-5px;
+		width:16px;
+		height:15px;
+		background:url("../img/ham.png") no-repeat;
+		background-size:cover;
+		cursor:pointer;
+	}
+	
+	.nav_bar_menu_s{
+		display:none;
+		position:absolute;
+		top:calc(50% - 5px);
+		height:28px;
+		right:5%;
+	}
+	.nav_bar_menu_s li{
+		float:left;
+		margin-right:2.5vw;
+	}
+	.nav_bar_menu_s li a{
+		color:#fff;
+		font-size:2vw;
+		font-weight:500;
+		text-align:center;
+	}
+	.nav_bar_menu_s li a:hover{
+		text-decoration:underline;
+	}
+
+	/* ===== 서비스 텍스트 =====*/
+
+	#recruit_top{
+		margin-top:10vh;
+		padding:0 8vw;
+		overflow:hidden;
+	}
+	.rt_text{
+		float:left;
+		color:#fff;
+		width:50%;
+	}
+	.rt_text1{
+		font-size:5vw;
+		letter-spacing:0.3vw;
+		font-weight:600;
+	}
+	.rt_text2{
+		font-size:2.2vw;
+		letter-spacing:0;
+		font-weight:600;
+		margin-top:1vw;
+	}
+
+	.recruit_go{
+		float:right;
+		margin-top:10%;
+		width:35%;
+		
+	}
+	.recruit_go a{
+		font-size:2.2vw;
+		width:100%;
+		border:1px solid #fff;
+		box-sizing:border-box;
+		display:block;
+		float:right;
+		text-align:center;
+		color:#fff;
+		padding:1vh 0;
+		font-weight:600;
+	}
+
+	/* ===== 채용 리스트 ===== */
+	#recruit_card{
+		margin-top:6vw;
+		padding:0 12vw;
+	}
+	#recruit_card li{
+		float:left;
+		width:80%;
+		height:80vw;
+		padding:15vw 3vw 7vw;
+		box-sizing:border-box;
+		margin-bottom:5vw;
+	}
+	.r_cate{
+		font-size:2.4vw;
+		font-weight:500;
+		padding:3% 10% 5%;	
+	}
+	.r_text1{
+		font-size:4vw;
+		font-weight:600;
+		padding:9% 10%;
+	}
+	.r_text2{
+		font-size:2.4vw;
+		color:#7c7c7c;
+		padding:18% 10% 1%;
+	}
+	#recruit_card li:nth-child(1){
+		background:url("../img/card2.png") no-repeat center center;
+		background-size:95% 100%;
+		margin-left:calc(50% - 40%);
+	}
+	#recruit_card li:nth-child(2){
+		background:url("../img/card2.png") no-repeat center center;
+		background-size:95% 100%;
+		margin-left:calc(50% - 40%);
+	}
+	#recruit_card li:nth-child(3){
+		float:left;
+		background:url("../img/card3.png") no-repeat center center;
+		background-size:95% 100%;
+		margin-left:calc(50% - 40%);
+	}
+	#rbg1{
+		background:url("../img/cardbg1.png") no-repeat 90% center;
+		background-size:10% auto;
+		
+	}
+	#rbg2{
+		background:url("../img/cardbg2.png") no-repeat 90% center;
+		background-size:14.5% auto;
+		
+	}
+	#rbg3{
+		background:url("../img/cardbg3.png") no-repeat 90% center;
+		background-size:16% auto;
+		
+	}
+
+	/* ===== 공지사항과 더 많은 채용공고 ===== */
+	#nonall{
+		padding:0 8vw;
+		margin-top:6vw;
+	}
+	/* 공지사항 */
+	#r_notice{
+		float:none;
+		width:100%;	
+		margin-bottom:7vw;
+	}
+	.rn_title{
+		padding-bottom:2.2vw;
+		border-bottom:1px solid #fff;
+		box-sizing:border-box;
+		color:#fff;
+		font-size:2.6vw;
+		font-weight:600;
+	}
+	.notice_table{
+		margin-top:0.6vw;
+		width:100%;
+		border-collapse:collapse;
+	}
+
+	.notice_table td:first-child{
+		padding:1.4vw 0;
+	}
+	.notice_table td:first-child a{
+		font-size:2vw;
+		color:#fff;
+		font-weight:600;
+	}
+	.notice_table td:first-child a:hover{
+		text-decoration:underline;
+	}
+	.notice_table td:last-child{
+		font-size:1.8vw;
+		color:#fff;
+		padding-bottom:1vw;
+		text-align:right;
+		font-weight:500;
+	}
+
+	/* 채용공고 상세 */
+	#r_all{
+		float:none;
+		box-sizing:border-box;
+		width:100%;
+	}
+	.rt_title{
+		float:left;
+	}
+	.rt_go{
+		float:right;
+	}
+	.ra_top{
+		padding-bottom:0.5vw;
+		border-bottom:1px solid #fff;
+		box-sizing:border-box;
+		color:#fff;
+	}
+	.rt_title{
+		font-size:2.6vw;
+		font-weight:600;
+		padding-bottom:2.2vw;
+		width:50%;
+	}
+	.rt_go{
+		padding-bottom:1vw;
+		width:50%;
+		text-align:right;
+	}
+	.rt_go a{
+		font-size:2.2vw;
+		font-weight:600;
+		color:#fff;
+	}
+	.rt_go a:hover{
+		color:#000;
+	}
+
+	.recruit_table{
+		margin-top:0.6vw;
+		width:100%;
+		border-collapse:collapse;
+	}
+	.recruit_table td:first-child{
+		padding:1.4vw 0;
+	}
+	.recruit_table td:first-child a{
+		font-size:2vw;
+		color:#fff;
+		font-weight:600;
+
+	}
+	.recruit_table td:first-child a:hover{
+		text-decoration:underline;
+	}
+	.recruit_table td:last-child{
+		font-size:1.8vw;
+		color:#fff;
+		padding-bottom:1vw;
+		text-align:right;
+		font-weight:500;
+	}
+	
+}
